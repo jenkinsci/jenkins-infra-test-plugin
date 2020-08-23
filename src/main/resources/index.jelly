@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+    Used for testing the Jenkins Project Infrastructure is working correctly, no users should need this ever.
+</div>
