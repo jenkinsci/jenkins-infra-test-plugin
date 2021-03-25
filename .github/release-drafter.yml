@@ -1,2 +1,1 @@
 _extends: .github
-tag-template: jenkins-infra-test-$NEXT_MINOR_VERSION
