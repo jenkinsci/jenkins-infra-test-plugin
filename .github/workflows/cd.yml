@@ -18,12 +18,7 @@ jobs:
 
       - name: debug
         run: |
-          echo ${{ toJSON(steps.verify-ci-status.outputs) }}
-
-          echo
-          echo 'was anything above?'
-
-          echo ${{ steps.verify-ci-status.outputs.ci-result }}
+          echo ${{ steps.verify-ci-status.outputs.result }}
 
       - name: Release Drafter
         uses: release-drafter/release-drafter@v5
