@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Verify CI status
-        uses: jenkins-infra/verify-ci-status-action@f6558fd
+        uses: jenkins-infra/verify-ci-status-action@f6558fdc735ca9b597a1f1346b858054b6f8ef40
         id: verify-ci-status
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
