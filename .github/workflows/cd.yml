@@ -39,14 +39,6 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check interesting categories
-        uses: jenkins-infra/interesting-category-action@main
-        id: interesting-categories
-        if: steps.verify-ci-status.outputs.result == 'success'
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
   release:
     runs-on: ubuntu-latest
     if: ${{ needs.validate.should_release == 'true' }}
