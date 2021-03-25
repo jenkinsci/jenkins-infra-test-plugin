@@ -32,31 +32,8 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: Interesting
-        id: interesting
-        run: |
-          set -euxo pipefail
-          echo $GITHUB_EVENT_NAME
-          if [ "${GITHUB_EVENT_NAME}" = "check_run" ]
-          then
-            INTERESTING_CATEGORIES='[💥🚨🎉🐛⚠🚀👷]|:(boom|tada|construction_worker):'
-            CATEGORIES=$(gh api /repos/$GITHUB_REPOSITORY/releases | jq -e -r '.[] | select(.draft == true and .name == "next") | .body')
-            if echo "${CATEGORIES}" | egrep -q "${INTERESTING_CATEGORIES}"; then
-              echo "Interesting release"
-              echo "::set-output name=should_release::true"
-            else
-              echo "Not interesting release"
-              echo "::set-output name=should_release::false"
-            fi
-          else
-            echo "::set-output name=should_release::true"
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Release
         uses: jenkins-infra/jenkins-maven-cd-action@v1.1.0
-        if: steps.interesting.outputs.should_release == 'true'
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
