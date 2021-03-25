@@ -37,7 +37,7 @@ jobs:
         run: |
           set -euxo pipefail
           echo $GITHUB_EVENT_NAME
-          if [ "${GITHUB_EVENT_NAME}" = "push" ]
+          if [ "${GITHUB_EVENT_NAME}" = "check_run" ]
           then
             INTERESTING_CATEGORIES='[💥🚨🎉🐛⚠🚀👷]|:(boom|tada|construction_worker):'
             CATEGORIES=$(gh api /repos/$GITHUB_REPOSITORY/releases | jq -e -r '.[] | select(.draft == true and .name == "next") | .body')
