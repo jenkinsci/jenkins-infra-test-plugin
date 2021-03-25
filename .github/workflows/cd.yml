@@ -42,7 +42,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     needs: [validate]
-    if: needs.validate.should_release
+    if: needs.validate.outputs.should_release
     steps:
     - name: Check out
       uses: actions/checkout@v2.3.4
