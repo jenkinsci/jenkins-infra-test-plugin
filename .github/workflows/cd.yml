@@ -16,6 +16,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           output_result: true
 
+      - name: debug
+        run: |
+          echo ${{ steps.verify-ci-status.outputs.result }}
+
       - name: Release Drafter
         uses: release-drafter/release-drafter@v5
         if: steps.verify-ci-status.outputs.result == 'success'
