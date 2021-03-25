@@ -18,7 +18,7 @@ jobs:
 
       - name: debug
         run: |
-          echo ${{ steps.verify-ci-status.outputs }}
+          echo ${{ toJSON(steps.verify-ci-status.outputs) }}
 
           echo
           echo 'was anything above?'
