@@ -18,7 +18,12 @@ jobs:
 
       - name: debug
         run: |
-          echo ${{ steps.verify-ci-status.outputs.result }}
+          echo ${{ steps.verify-ci-status.outputs }}
+
+          echo
+          echo 'was anything above?'
+
+          echo ${{ steps.verify-ci-status.outputs.ci-result }}
 
       - name: Release Drafter
         uses: release-drafter/release-drafter@v5
