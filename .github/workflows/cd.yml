@@ -9,8 +9,7 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     outputs:
-      ci_valid: ${{ steps.verify-ci-status.outputs.result }}
-      interesting_release: ${{ steps.interesting-categories.outputs.interesting }}
+      should_release: ${{ steps.verify-ci-status.outputs.result == 'success' && steps.interesting-categories.outputs.interesting == 'true' }}
     steps:
       - name: Verify CI status
         uses: timja/verify-ci-status-action@output-result
@@ -42,7 +41,7 @@ jobs:
 
   release:
     runs-on: ubuntu-latest
-    if: ${{ needs.validate.ci_valid == 'success' && needs.validate.interesting_release == 'true' }}
+    if: ${{ needs.validate.should_release == true }}
     steps:
     - name: Check out
       uses: actions/checkout@v2.3.4
