@@ -2,6 +2,6 @@
  See the documentation for more options:
  https://github.com/jenkins-infra/pipeline-library/
 */
-// buildPlugin(useAci: true, platforms: ['linux'])
+@Library('pipeline-library@simplify-incrementals-publishing')
 
-echo 'disabled ci'
+buildPlugin(useAci: true, platforms: ['linux'])
