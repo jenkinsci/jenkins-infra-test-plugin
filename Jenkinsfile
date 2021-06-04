@@ -4,4 +4,4 @@
 */
 @Library('pipeline-library@simplify-incrementals-publishing')
 
-buildPlugin(platforms: ['linux'])
+buildPlugin()
