@@ -2,5 +2,6 @@
  See the documentation for more options:
  https://github.com/jenkins-infra/pipeline-library/
 */
-buildPlugin(useAci: true, platforms: ['linux'])
+@Library('pipeline-library@pull/220/head') _
 
+buildPlugin(useAci: true, platforms: ['linux'])
