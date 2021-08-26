@@ -2,6 +2,5 @@
  See the documentation for more options:
  https://github.com/jenkins-infra/pipeline-library/
 */
-// buildPlugin(useAci: true, platforms: ['linux'])
+buildPlugin(useAci: true, platforms: ['linux'])
 
-echo 'disabled ci'
