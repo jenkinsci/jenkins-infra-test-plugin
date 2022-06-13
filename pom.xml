@@ -14,7 +14,7 @@
     <packaging>hpi</packaging>
     <properties>
         <changelist>999999-SNAPSHOT</changelist>
-        <jenkins.version>2.235.1</jenkins.version>
+        <jenkins.version>2.249.3</jenkins.version>
     </properties>
     <name>Jenkins infrastructure test</name>
     <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
@@ -23,8 +23,8 @@
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.235.x</artifactId>
-                <version>11</version>
+                <artifactId>bom-2.249.x</artifactId>
+                <version>991.v88fedb20a115</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
