@@ -2,4 +2,5 @@
 <div>
     Used for testing that the Jenkins Project Infrastructure is working correctly.
     No users should ever need to install this plugin.
+    <a href="https://github.com/jenkinsci/jenkins-infra-test-plugin">https://github.com/jenkinsci/jenkins-infra-test-plugin</a>
 </div>
