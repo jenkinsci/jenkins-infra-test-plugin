@@ -1,4 +1,4 @@
-@Library('pipeline-library@refs/pull/458') _
+@Library('pipeline-library@pull/458/head') _
 
 /*
  See the documentation for more options:
