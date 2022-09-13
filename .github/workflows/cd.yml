@@ -9,9 +9,7 @@ on:
 
 jobs:
   maven-cd:
-    ## Testing of https://github.com/dduportal/jenkins-maven-cd-action/pull/1
-    #uses: jenkins-infra/github-reusable-workflows/.github/workflows/maven-cd.yml@v1
-    uses: dduportal/github-reusable-workflows/.github/workflows/maven-cd.yml@v1
+    uses: jenkins-infra/github-reusable-workflows/.github/workflows/maven-cd.yml@v1
     secrets:
       MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
       MAVEN_TOKEN: ${{ secrets.MAVEN_TOKEN }}
