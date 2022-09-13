@@ -60,7 +60,7 @@ jobs:
         java-version: 11
 
     - name: Release
-      uses: dduportal/jenkins-maven-cd-action@v1.0.1
+      uses: dduportal/jenkins-maven-cd-action@feat/annotated-tag
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
