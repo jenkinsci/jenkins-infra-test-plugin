@@ -14,7 +14,7 @@
     <packaging>hpi</packaging>
     <properties>
         <changelist>999999-SNAPSHOT</changelist>
-        <jenkins.version>2.249.3</jenkins.version>
+        <jenkins.version>2.346.1</jenkins.version>
     </properties>
     <name>Jenkins infrastructure test</name>
     <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
