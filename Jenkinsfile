@@ -1,4 +1,3 @@
-@Library('pipeline-library@pull/469/head') _
 /*
  See the documentation for more options:
  https://github.com/jenkins-infra/pipeline-library/
