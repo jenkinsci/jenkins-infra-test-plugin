@@ -3,4 +3,9 @@
  https://github.com/jenkins-infra/pipeline-library/
 */
 @Library('pipeline-library@pull/615/head') _
-buildPlugin(useContainerAgent: true, platforms: ['linux', 'windows'], jdkVersions: ['11'])
+buildPlugin(
+  useContainerAgent: true,
+  configurations: [
+    [platform: 'linux', jdk: 17],
+    [platform: 'windows', jdk: 11],
+])
