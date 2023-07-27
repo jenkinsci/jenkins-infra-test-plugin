@@ -1,6 +1,6 @@
-# jenkins-infra-test
+# jenkins-infra-💣
 
-Used only for testing the Jenkins Project infrastructure is working correctly for release and mirroring
+Used only for 💣ing the Jenkins Project infrastructure is working correctly for release and mirroring
 Anyone can request access to this plugin via repository-permission-updater if they're working in this area
 
 > **Note**
