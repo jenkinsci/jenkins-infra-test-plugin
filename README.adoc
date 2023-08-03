@@ -1,0 +1,23 @@
+= jenkins-infra-test
+
+Used only for testing the Jenkins Project infrastructure is working correctly for release and mirroring
+Anyone can request access to this plugin via repository-permission-updater if they're working in this area
+
+== Testing jenkins-infra/pipeline-library pull request changes
+
+By opening a pull request on this repos with the following content, you'll be able to check your changes on https://github.com/jenkins-infra/pipeline-library/pulls[ci.jenkins.io shared pipeline library]:
+
+[source,diff]
+----
+--- jenkins-infra-test-plugin/Jenkinsfile
++++ jenkins-infra-test-plugin/Jenkinsfile
+@@ -1,3 +1,4 @@
++ @Library('pipeline-library@pull/<pull-request-number>/head') _
+  buildPlugin(
+    useContainerAgent: true,
+    configurations: [
+      [platform: 'linux', jdk: 17],
+      [platform: 'windows', jdk: 11],
+  ])
+----
+
