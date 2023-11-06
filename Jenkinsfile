@@ -1,6 +1,10 @@
-buildPlugin(
-  useContainerAgent: true,
-  configurations: [
-    [platform: 'linux', jdk: 21],
-    [platform: 'windows', jdk: 17],
-])
+#!/usr/bin/env groovy
+@Library('pipeline-library@pull/783/head') _
+
+stage('test') {
+    node('windows-2019') {
+        infra.withDockerCredentials {
+            echo "OK"
+        }
+    }
+}
