@@ -14,6 +14,6 @@ public class Example {
      * @param param ignored
      */
     public void doesNothing(String param) {
-        // does nothing
+        // does nothing at all
     }
 }
