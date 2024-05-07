@@ -20,6 +20,10 @@
     <name>Jenkins infrastructure test</name>
     <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
 
+    <!-- Test jenkins-infra/github-reusable-workflows#31 --> 
+    <maven.compiler.release>17</maven.compiler.release>
+    <maven.compiler.testRelease>17</maven.compiler.testRelease>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
