@@ -6,6 +6,9 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class UpdateCenterTest {
     @Rule
     public JenkinsConfiguredWithCodeRule j = new JenkinsConfiguredWithCodeRule();
@@ -13,6 +16,8 @@ public class UpdateCenterTest {
     @Before
     public void prepare() throws Exception {
         j.jenkins.getUpdateCenter().updateAllSites();
+
+        assertThat(j.jenkins.getPlugin("opentelemetry"), notNullValue());
     }
 
     @ConfiguredWithCode("configuration-as-code.yml")
