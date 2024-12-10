@@ -1,12 +1,12 @@
 package io.jenkins.plugins.jenkinsinfratest;
 
+import io.jenkins.plugins.casc.misc.JenkinsConfiguredWithCodeRule;
 import org.junit.Rule;
 import org.junit.Test;
-import org.jvnet.hudson.test.JenkinsRule;
 
 public class UpdateCenterTest {
     @Rule
-    public JenkinsRule j = new JenkinsRule();
+    public JenkinsConfiguredWithCodeRule j = new JenkinsConfiguredWithCodeRule();
 
     @Test
     public void test() throws Exception {
