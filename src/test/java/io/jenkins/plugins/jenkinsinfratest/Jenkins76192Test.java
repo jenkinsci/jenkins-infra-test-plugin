@@ -1,9 +1,11 @@
 package io.jenkins.plugins.jenkinsinfratest;
 
-import hudson.model.TaskListener;
 import hudson.tools.DownloadFromUrlInstaller;
+import hudson.util.LogTaskListener;
 import io.jenkins.plugins.jenkinsinfratest.jenkins76192.SonargraphBuild;
 import io.jenkins.plugins.jenkinsinfratest.jenkins76192.SonargraphBuildInstaller;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import jenkins.model.Jenkins;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -148,6 +150,6 @@ public class Jenkins76192Test {
         installable.url = "https://eclipse.hello2morrow.com/jenkins/sonargraphBuild/" + filename;
         installable.name = filename;
         final SonargraphBuildInstaller installer = new SonargraphBuildInstaller(installable);
-        installer.performInstallation(new SonargraphBuild("sonargraphBuild", null), Jenkins.get(), TaskListener.NULL);
+        installer.performInstallation(new SonargraphBuild("sonargraphBuild", null), Jenkins.get(), new LogTaskListener(Logger.getLogger(getClass().getName()), Level.INFO));
     }
 }
