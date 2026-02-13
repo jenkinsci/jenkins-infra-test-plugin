@@ -79,7 +79,7 @@
                             <executable>sh</executable>
                             <arguments>
                                 <argument>-c</argument>
-                                <argument>fgrep -i mirror "$MAVEN_SETTINGS"</argument>
+                                <argument>fgrep -i mirror "$MAVEN_SETTINGS" || :</argument>
                             </arguments>
                         </configuration>
                     </execution>
