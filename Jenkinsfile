@@ -1,3 +1,5 @@
+@Library('pipeline-library@pull/1025/head') _
+
 buildPlugin(
   useContainerAgent: true,
   configurations: [
