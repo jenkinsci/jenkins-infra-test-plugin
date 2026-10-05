@@ -3,7 +3,7 @@ package io.jenkins.plugins.jenkinsinfratest;
 import jenkins.model.Jenkins;
 
 /**
- * An example class with some Javadoc.
+ * An example class with some Javadoc. Nice writing.
  */
 public class Example {
 
