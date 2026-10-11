@@ -23,3 +23,14 @@ By opening a pull request on this repos with the following content, you'll be ab
       [platform: 'windows', jdk: 17],
   ])
 ----
+
+== Simulating test failures
+
+The `FailureSimulationTest#testFailureSimulation` test can be used to verify that CI pipelines correctly handle test failures and JUnit reports.
+
+By default, the test passes. To deliberately fail it, pass the `simulateTestFailure` Maven system property:
+
+[source,bash]
+----
+mvn test -DsimulateTestFailure=true
+----
