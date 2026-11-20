@@ -1,3 +1,5 @@
+@Library('pipeline-library@helpdesk5365-cache-already-decompressed') _
+
 buildPlugin(
   useContainerAgent: true,
   configurations: [
